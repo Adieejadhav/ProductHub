@@ -10,11 +10,11 @@ const EnquiryModal = ({ isOpen, onClose, productName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_89dqkng',    // Replace this
-      'template_66wh52q',   // Replace this
+   emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       formRef.current,
-      '0DoOCfrkneoqCpMQW'     // Replace this
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     ).then(() => {
       alert('✅ Enquiry sent successfully!');
       formRef.current.reset();
