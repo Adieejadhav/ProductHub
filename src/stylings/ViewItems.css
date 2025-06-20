@@ -78,3 +78,12 @@ body {
     width: 100%;
   }
 }
+
+.empty-text {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 40px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
