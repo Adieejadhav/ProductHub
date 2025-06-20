@@ -42,6 +42,14 @@ const ViewItems = () => {
         >
           Loading items...
         </motion.div>
+      ) : items.length === 0 ? (
+        <motion.div
+          className="empty-text"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          😕 No products available right now.
+        </motion.div>
       ) : (
         <motion.div
           className="items-grid"
