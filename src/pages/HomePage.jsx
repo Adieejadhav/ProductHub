@@ -20,7 +20,7 @@ const HomePage = () => {
             Let’s make a difference — one item at a time.
           </p>
           <motion.a
-            href="/add"
+            href="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="cta-button"
