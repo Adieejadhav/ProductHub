@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // ✅ Import Link for client-side routing
 import '../stylings/HomePage.css';
 
 const HomePage = () => {
@@ -19,23 +20,23 @@ const HomePage = () => {
             A community-driven platform to donate, share, and view essential items.
             Let’s make a difference — one item at a time.
           </p>
-          <motion.a
-            href="/add"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="cta-button"
           >
-            Add an Item
-          </motion.a>
+            <Link to="/add" className="cta-button">
+              Add an Item
+            </Link>
+          </motion.div>
         </div>
 
         <motion.img
-        src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png"
-        alt="hero"
-        className="hero-image"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+          src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png"
+          alt="hero"
+          className="hero-image"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
         />
       </motion.div>
 
